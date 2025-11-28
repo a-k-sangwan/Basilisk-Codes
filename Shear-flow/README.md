@@ -5,11 +5,9 @@ This repository contains scripts and simulation code to study two-phase shear fl
 ## 📂 Repository Structure
 
 ```
-src/
- ├── single.c          # Main Basilisk simulation
- ├── output_vtu.h      # VTU output utilities for ParaView visualization
-python/
- ├── genData.py        # Initial velocity & interface generator
+single.c          # Main Basilisk simulation
+output_vtu.h      # VTU output utilities for ParaView visualization
+genData.py        # Initial velocity & interface generator
 run.sh                 # Compile & run wrapper script
 .gitignore
 LICENSE

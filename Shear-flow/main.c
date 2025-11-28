@@ -37,6 +37,13 @@ u.t[top] = dirichlet(U0); // Tangential velocity at top boundary
 u.t[bottom] = neumann(0.); // Tangential velocity at bottom boundary
 int main(int argc, char *argv[])
 {
+    if (argc > 1)
+    {
+        for (int i = 1; i < argc; i++)
+        {
+            (strcmp(argv[i], "-r") == 0) ? sprintf(restoreFileName, "dumpfile/dump-%d", atoi(argv[i + 1])) : none;
+        }
+    }
     periodic(right); // Periodic boundary condition at right
     G.y = -gG; // Gravity in y-direction
     f.sigma = 72.; // Surface tension
@@ -52,6 +59,7 @@ int main(int argc, char *argv[])
 
 event init(t = 0) // Initialization event at time t=0
 {
+    // sprintf(restoreFileName, "dumpfile/dump-%d",0); // Default restore file name
     if (restore(file = restoreFileName)) // Restore from file if available
     {
         fprintf(stderr, "\n\n*******************");

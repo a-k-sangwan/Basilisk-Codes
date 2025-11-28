@@ -99,10 +99,9 @@ Open > vtufile/snap-*.vtu
 
 ## 🔁 Restarting a Simulation
 
-Update pointer to latest dump:
+Say you want to restart the simulation from 20th dumpfile i.e., File dumpfile/dump-20 
 ```bash
-echo "dumpfile/dump-<N>" > restoreFile.txt
-./run
+./run 20
 ```
 
 ---

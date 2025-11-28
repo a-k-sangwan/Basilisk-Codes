@@ -50,7 +50,7 @@ chmod +x run.sh
 
 ### Option 2 — Manual compile & run
 ```bash
-qcc -O2 -Wall src/single.c -lm -o run
+qcc -O2 -Wall single.c -lm -o run
 ./run
 ```
 
